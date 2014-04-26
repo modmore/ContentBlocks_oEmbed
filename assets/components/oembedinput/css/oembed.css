@@ -1,0 +1,22 @@
+.contentblocks-field-oembed .meta,
+.contentblocks-field-oembed .embed,
+.contentblocks-field-oembed .contentblocks-field-unset-embed {
+    display: none;
+}
+.preview .contentblocks-field-oembed .meta,
+.preview .contentblocks-field-oembed .embed{
+    display: block;
+}
+
+.preview .contentblocks-field-oembed .contentblocks-field-unset-embed {
+    display: inline;
+}
+
+.preview .contentblocks-field-oembed .paste_link {
+    display: none;
+}
+
+.contentblocks-field-oembed .provider_name {
+    font-size: 80%;
+    font-weight: bold;
+}
