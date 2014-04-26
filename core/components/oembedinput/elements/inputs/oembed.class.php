@@ -8,6 +8,23 @@ class oEmbedInput extends cbBaseInput {
     public $defaultIcon = 'chunk_C';
     public $defaultTpl = '<div class="oembed-container">[[+html]]</div>';
 
+    /**
+     * Make sure the oembedinput lexicon is loaded
+     *
+     * @param ContentBlocks $contentBlocks
+     * @param array $options
+     */
+    public function __construct(ContentBlocks $contentBlocks, array $options = array())
+    {
+        parent::__construct($contentBlocks, $options);
+        $this->modx->lexicon->load('oembedinput:default');
+    }
+
+    /**
+     * Load the oembed CSS, containing some mild styling stuff.
+     *
+     * @return array
+     */
     public function getCss()
     {
         $assetsUrl = $this->modx->getOption('oembedinput.assets_url', null, MODX_ASSETS_URL . 'components/oembedinput/');
@@ -18,6 +35,8 @@ class oEmbedInput extends cbBaseInput {
     }
 
     /**
+     * Load the main input javascript.
+     *
      * @return array
      */
     public function getJavaScripts()
@@ -29,6 +48,8 @@ class oEmbedInput extends cbBaseInput {
     }
 
     /**
+     * Load the template for the input, and also set a JS variable so the JS can find the connector.
+     *
      * @return array
      */
     public function getTemplates()
@@ -56,11 +77,21 @@ class oEmbedInput extends cbBaseInput {
         return $tpls;
     }
 
+    /**
+     * Return the name for the input from the lexicon.
+     *
+     * @return string
+     */
     public function getName()
     {
         return $this->modx->lexicon('oembedinput');
     }
 
+    /**
+     * Return the description for the input from the lexicon.
+     *
+     * @return string
+     */
     public function getDescription()
     {
         return $this->modx->lexicon('oembedinput.description');
