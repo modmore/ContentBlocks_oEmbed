@@ -50,12 +50,7 @@ class oEmbedLoadEmbedProcessor extends modProcessor {
         $result = $this->modx->fromJSON($result);
 
         if (!isset($result['error'])) {
-            return $this->success('', array(
-                'title' => $result['title'],
-                'url' => $result['url'],
-                'html' => $result['html'],
-                'provider_name' => $result['provider_name'],
-            ));
+            return $this->success('', $result);
         }
         else {
             return $this->failure($result['error']);
