@@ -12,12 +12,7 @@
         // Do something when the input is being loaded
         input.init = function() {
             if (data.html) {
-                input.embedData = {
-                    html: data.html,
-                    title: data.title,
-                    url: data.url,
-                    provider_name: data.provider_name
-                };
+                input.embedData = data;
 
                 dom.find('.embed').html(input.embedData.html);
                 dom.addClass('preview');
