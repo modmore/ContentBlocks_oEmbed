@@ -2,7 +2,7 @@
 return array(
     'endpoint' => array(
         'area' => 'oEmbed Service',
-        'value' => 'http://noembed.com/embed?nowrap=on&url=',
+        'value' => 'https://noembed.com/embed?nowrap=on&url=',
     ),
 
 );

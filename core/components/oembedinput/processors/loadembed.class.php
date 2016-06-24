@@ -31,7 +31,7 @@ class oEmbedLoadEmbedProcessor extends modProcessor {
      * @return bool
      */
     public function process() {
-        $url = $this->modx->getOption('oembedinput.endpoint', null, 'http://noembed.com/embed?nowrap=on&url=') . urlencode($this->link);
+        $url = $this->modx->getOption('oembedinput.endpoint', null, 'https://noembed.com/embed?nowrap=on&url=') . urlencode($this->link);
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);

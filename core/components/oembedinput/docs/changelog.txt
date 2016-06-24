@@ -1,3 +1,5 @@
+- Update endpoint to use https instead of http [#1]
+
 ++ oEmbed Input for ContentBlocks 1.1.0
 ++ Released on 2015-04-29
 +++++++++++++++++++++++++++++++++++++++
