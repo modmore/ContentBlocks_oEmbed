@@ -1,3 +1,10 @@
+oEmbed Input for ContentBlocks 1.1.2
+------------------------------------
+Released on 2021-01-15
+
+- Make sure loadembed processor requires generic manager permission to access. Should not be necessary as connectors check for logged in users, but can't hurt to lock down further.
+- Provide a slightly more useful error message in case loading an embed doesn't work, to indicate it's a problem loading the embed and not a file permissions or other issue
+
 oEmbed Input for ContentBlocks 1.1.1
 ------------------------------------
 Released on 2015-06-24

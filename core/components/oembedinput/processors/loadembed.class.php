@@ -5,6 +5,11 @@
 class oEmbedLoadEmbedProcessor extends modProcessor {
     public $link = '';
 
+    public function checkPermissions()
+    {
+        return $this->modx->hasPermission('frames');
+    }
+
     /**
      * @return bool|string
      */
@@ -35,7 +40,6 @@ class oEmbedLoadEmbedProcessor extends modProcessor {
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($ch);
         if( curl_errno( $ch ) ){
@@ -52,9 +56,7 @@ class oEmbedLoadEmbedProcessor extends modProcessor {
         if (!isset($result['error'])) {
             return $this->success('', $result);
         }
-        else {
-            return $this->failure($result['error']);
-        }
+        return $this->failure('Could not load information about this embed. Received error: ' . $result['error']);
     }
 }
 
