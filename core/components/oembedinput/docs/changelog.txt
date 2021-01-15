@@ -1,15 +1,18 @@
-++ oEmbed Input for ContentBlocks 1.1.1
-++ Released on 2015-06-24
-+++++++++++++++++++++++++++++++++++++++
+oEmbed Input for ContentBlocks 1.1.1
+------------------------------------
+Released on 2015-06-24
+
 - Update endpoint to use https instead of http [#1]
 - Added resolver that automatically updates the endpoint to https on upgrade
 
-++ oEmbed Input for ContentBlocks 1.1.0
-++ Released on 2015-04-29
-+++++++++++++++++++++++++++++++++++++++
-- Make all noembed data available to the field template. You can now build your own embed markup instead of relying on [[+html]].
+oEmbed Input for ContentBlocks 1.1.0
+------------------------------------
+Released on 2015-04-29
 
-++ oEmbed Input for ContentBlocks 1.0.0
-++ Released on 2014-04-26
-+++++++++++++++++++++++++++++++++++++++
+- Make all noembed data available to the field template. You can now build your own embed markup instead of relying on .
+
+oEmbed Input for ContentBlocks 1.0.0
+------------------------------------
+Released on 2014-04-26
+
 - First public release
